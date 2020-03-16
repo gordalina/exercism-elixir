@@ -12,6 +12,6 @@ defmodule GCD do
       3
 
   """
-  def of(x, 0), do: x
-  def of(x, y), do: of(y, rem(x, y))
+  def of(x, 0) when x > 0, do: x
+  def of(x, y) when x > 0 and y > 0, do: of(y, rem(x, y))
 end
